@@ -1,7 +1,6 @@
-"use client"
+'use client'
 
-import { useState, useEffect } from "react"
-import ClientCardDropdown from "@/components/client/ClientCardDropdown"
+import ClientCardDropdown from '@/components/client/ClientCardDropdown'
 
 import {
 	PhoneIcon,

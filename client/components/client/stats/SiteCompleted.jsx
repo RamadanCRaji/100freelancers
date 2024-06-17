@@ -1,6 +1,6 @@
-import React from "react";
-import { useEffect, useState } from "react";
-import CountUp from "react-countup";
+import React from 'react';
+import { useEffect, useState } from 'react';
+import CountUp from 'react-countup';
 
 function SiteCompleted({ stats, showPercentage }) {
   const [numberData, setNumberData] = useState({
@@ -9,8 +9,8 @@ function SiteCompleted({ stats, showPercentage }) {
   });
   useEffect(() => {
     setNumberData((prevData) => ({
-      siteCompleted: stats.profileStats["sitesCompleted"],
-      paid: stats.profileStats["paid"],
+      siteCompleted: stats.profileStats['sitesCompleted'],
+      paid: stats.profileStats['paid'],
     }));
   }, [stats]);
 
@@ -21,7 +21,7 @@ function SiteCompleted({ stats, showPercentage }) {
     : 0;
   return (
     <>
-      <div className=" stats stats-vertical w-full bg-primary text-primary-content  shadow lg:stats-horizontal ">
+      <div className="stats stats-vertical w-full bg-primary text-primary-content shadow lg:stats-horizontal ">
         <div className="stat ">
           <div className="sm:text-md stat-title text-secondary 2xs:text-base xs:text-base sm:flex sm:items-center sm:justify-center xl:text-lg">Completed</div>
           <div className="stat-value 2xs:text-base xs:text-base sm:text-lg lg:text-2xl xl:text-2xl">

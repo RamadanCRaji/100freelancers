@@ -1,6 +1,6 @@
-import React from "react";
-import { useEffect, useState } from "react";
-import CountUp from "react-countup";
+import React from 'react';
+import { useEffect, useState } from 'react';
+import CountUp from 'react-countup';
 
 function OutreachResponseAnalyzer({ stats, showPercentage }) {
   const [responseCounts, setResponseCounts] = useState({
@@ -9,8 +9,8 @@ function OutreachResponseAnalyzer({ stats, showPercentage }) {
   });
   useEffect(() => {
     setResponseCounts((prevData) => ({
-      answeredOutreach: stats.profileStats["answeredOutreach"],
-      unAnsweredOutReach: stats.profileStats["unansweredOutreach"],
+      answeredOutreach: stats.profileStats['answeredOutreach'],
+      unAnsweredOutReach: stats.profileStats['unansweredOutreach'],
     }));
   }, [stats]);
 
@@ -25,8 +25,8 @@ function OutreachResponseAnalyzer({ stats, showPercentage }) {
     : 0;
   return (
     <>
-      <div className=" stats stats-vertical w-full bg-primary  text-primary-content  shadow 2xs:stats-horizontal xs:stats-horizontal sm:stats-horizontal  md:stats-horizontal lg:stats-horizontal sm:h-24">
-        <div className="stat  p-1 xs:p-0">
+      <div className="stats stats-vertical w-full bg-primary text-primary-content shadow 2xs:stats-horizontal xs:stats-horizontal sm:stats-horizontal md:stats-horizontal lg:stats-horizontal sm:h-24">
+        <div className="stat p-1 xs:p-0">
           <div className="sm:text-md stat-title text-secondary 2xs:text-base xs:text-base sm:flex sm:items-center sm:justify-center xl:text-lg">
             Answered
           </div>

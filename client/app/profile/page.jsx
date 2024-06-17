@@ -1,13 +1,13 @@
-"use client";
-import React, { useState, useEffect } from "react";
-import BusinessEngagementChart from "@components/client/stats/BusinessCardEngagementChart";
-import NumberStats from "@components/client/stats/NumberStats";
-import ProposalVsContract from "@components/client/stats/ProposalVsContract";
-import SiteCompleted from "@components/client/stats/SiteCompleted";
-import OutreachSuccesseRate from "@components/client/stats/OutreachSuccesseRate";
-import OutreachResults from "@components/client/stats/YesOrNoResponse";
-import OutreachResponseAnalyzer from "@components/client/stats/OutreachResponseAnalyzer";
-import { fetchStats } from "@utils/stats";
+'use client';
+import React, { useState, useEffect } from 'react';
+import BusinessEngagementChart from '@components/client/stats/BusinessCardEngagementChart';
+import NumberStats from '@components/client/stats/NumberStats';
+import ProposalVsContract from '@components/client/stats/ProposalVsContract';
+import SiteCompleted from '@components/client/stats/SiteCompleted';
+import OutreachSuccesseRate from '@components/client/stats/OutreachSuccesseRate';
+import OutreachResults from '@components/client/stats/YesOrNoResponse';
+import OutreachResponseAnalyzer from '@components/client/stats/OutreachResponseAnalyzer';
+import { fetchStats } from '@utils/stats';
 
 export default function Profile() {
   const [viewPercentage, setViewPercentage] = useState(false);
@@ -37,17 +37,17 @@ export default function Profile() {
     fetchStats().then((data) => setStatsData((prevData) => data));
   }, []);
 
-  const maxWidth = "1000px";
+  const maxWidth = '1000px';
 
-  const minWidth = "300px";
+  const minWidth = '300px';
 
-  const maxHeight = "1200px";
+  const maxHeight = '1200px';
 
   return (
     <main>
-      <div className=" mb-2 flex items-center justify-start gap-2 pl-2">
+      <div className="mb-2 flex items-center justify-start gap-2 pl-2">
         <span className="font-bold text-secondary">TOGGLE VIEW</span>
-        <label className=" flex">
+        <label className="flex">
           <input
             type="checkbox"
             className="toggle"
@@ -83,7 +83,7 @@ export default function Profile() {
             </div>
           </div>
         </section>
-        <section className="rounded-box bg-primary  p-2 2xs:row-start-3 2xs:flex 2xs:flex-col  2xs:items-center 2xs:justify-between xs:col-span-1 sm:col-span-2 sm:col-start-1 sm:row-span-1 sm:row-start-4 md:col-span-2 md:col-start-1 md:row-span-1 md:row-start-4 lg:col-span-3 lg:col-start-1 lg:row-span-1 lg:row-start-3 xl:col-span-4 xl:col-start-1 xl:row-span-2 xl:row-start-5">
+        <section className="rounded-box bg-primary p-2 2xs:row-start-3 2xs:flex 2xs:flex-col 2xs:items-center 2xs:justify-between xs:col-span-1 sm:col-span-2 sm:col-start-1 sm:row-span-1 sm:row-start-4 md:col-span-2 md:col-start-1 md:row-span-1 md:row-start-4 lg:col-span-3 lg:col-start-1 lg:row-span-1 lg:row-start-3 xl:col-span-4 xl:col-start-1 xl:row-span-2 xl:row-start-5">
           <h3 className="xs:text-base sm:text-lg">Outreach Success Rate </h3>
           <div className=" my-auto  w-full rounded-lg md:flex">
             <div className="w-full md:shrink">
@@ -94,11 +94,11 @@ export default function Profile() {
             </div>
           </div>
         </section>
-        <section className=" rounded-box  bg-primary p-2 2xs:row-start-4 2xs:flex 2xs:flex-col 2xs:items-center 2xs:justify-between xs:col-span-1 sm:col-span-4 sm:col-start-1 sm:row-span-2 sm:row-start-2 md:col-span-4 md:col-start-1 md:row-span-2  md:row-start-2 lg:col-span-3 lg:col-start-4 lg:row-span-3 lg:row-start-1 xl:col-span-8 xl:col-start-5 xl:row-span-4 xl:row-start-1">
+        <section className="rounded-box bg-primary p-2 2xs:row-start-4 2xs:flex 2xs:flex-col 2xs:items-center 2xs:justify-between xs:col-span-1 sm:col-span-4 sm:col-start-1 sm:row-span-2 sm:row-start-2 md:col-span-4 md:col-start-1 md:row-span-2 md:row-start-2 lg:col-span-3 lg:col-start-4 lg:row-span-3 lg:row-start-1 xl:col-span-8 xl:col-start-5 xl:row-span-4 xl:row-start-1">
           <h3 className="xs:text-base sm:text-lg">
             Saved vs Contacted Clients
           </h3>
-          <div className="flex w-full  grow items-center   transition-all duration-300 2xs:justify-evenly sm:justify-evenly md:justify-evenly lg:flex-col lg:justify-evenly xl:justify-evenly">
+          <div className="flex w-full grow items-center transition-all duration-300 2xs:justify-evenly sm:justify-evenly md:justify-evenly lg:flex-col lg:justify-evenly xl:justify-evenly">
             <div className="relative sm:h-[340px] sm:w-[340px] md:h-[350px] md:w-[350px]  lg:h-[400px] lg:w-[400px] xl:h-[500px] xl:w-[500px]">
               <BusinessEngagementChart stats={statsData} />
             </div>
@@ -112,7 +112,7 @@ export default function Profile() {
           <h3 className=" xs:text-base sm:text-lg">
             Proposals sent vs Contracts sent
           </h3>
-          <div className=" my-auto w-full rounded-lg md:flex ">
+          <div className="my-auto w-full rounded-lg md:flex ">
             <div className="w-full md:shrink">
               <ProposalVsContract
                 stats={statsData}
@@ -121,7 +121,7 @@ export default function Profile() {
             </div>
           </div>
         </section>
-        <section className=" rounded-box  bg-primary p-2  2xs:row-start-6 2xs:flex 2xs:flex-col 2xs:items-center 2xs:justify-between xs:col-span-1 sm:col-span-4 sm:col-start-1 sm:row-span-1 sm:row-start-5 md:col-span-4 md:col-start-1 md:row-start-5  md:flex lg:col-span-3 lg:col-start-4 lg:row-span-1  lg:row-start-4 xl:col-span-4 xl:col-start-9 xl:row-span-2">
+        <section className=" rounded-box bg-primary p-2 2xs:row-start-6 2xs:flex 2xs:flex-col 2xs:items-center 2xs:justify-between xs:col-span-1 sm:col-span-4 sm:col-start-1 sm:row-span-1 sm:row-start-5 md:col-span-4 md:col-start-1 md:row-start-5 md:flex lg:col-span-3 lg:col-start-4 lg:row-span-1 lg:row-start-4 xl:col-span-4 xl:col-start-9 xl:row-span-2">
           <h3 className=" xs:text-base sm:text-lg">Sites completed</h3>
           <div className=" my-auto  w-full rounded-lg">
             <SiteCompleted stats={statsData} showPercentage={viewPercentage} />

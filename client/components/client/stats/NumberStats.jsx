@@ -1,5 +1,5 @@
-import React from "react";
-import { useEffect, useState } from "react";
+import React from 'react';
+import { useEffect, useState } from 'react';
 function NumberStats({ stats, showPercentage }) {
   const [numberData, setNumberData] = useState({
     totalClient: 0,
@@ -8,8 +8,8 @@ function NumberStats({ stats, showPercentage }) {
 
   useEffect(() => {
     setNumberData((prevData) => ({
-      totalClient: stats.profileStats["totalClients"],
-      clientsContacted: stats.profileStats["totalOutreach"],
+      totalClient: stats.profileStats['totalClients'],
+      clientsContacted: stats.profileStats['totalOutreach'],
     }));
   }, [stats]);
 
@@ -20,7 +20,7 @@ function NumberStats({ stats, showPercentage }) {
   return (
     <div className="stats stats-vertical w-full bg-primary text-primary-content shadow 2xs:stats-horizontal lg:stats-horizontal">
       <div className="stat p-1">
-        <div className=" sm:text-md stat-title text-secondary 2xs:text-[15px] xs:text-base sm:flex sm:items-center sm:justify-center xl:text-lg">
+        <div className="sm:text-md stat-title text-secondary 2xs:text-[15px] xs:text-base sm:flex sm:items-center sm:justify-center xl:text-lg">
           Total Clients
         </div>
         <div className="stat-value 2xs:text-base xs:text-base sm:text-lg lg:text-2xl xl:text-2xl">
@@ -28,7 +28,7 @@ function NumberStats({ stats, showPercentage }) {
         </div>
       </div>
       <div className="stat p-1">
-        <div className=" sm:text-md stat-title text-secondary 2xs:text-[15px] xs:text-base sm:flex sm:items-center sm:justify-center xl:text-lg">
+        <div className="sm:text-md stat-title text-secondary 2xs:text-[15px] xs:text-base sm:flex sm:items-center sm:justify-center xl:text-lg">
           Clients Contacted
         </div>
         <div className="stat-value 2xs:text-base xs:text-base sm:text-lg lg:text-2xl xl:text-2xl">

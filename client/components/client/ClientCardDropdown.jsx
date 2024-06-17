@@ -1,6 +1,6 @@
-"use client";
-import React from "react";
-import { EllipsisHorizontalIcon } from "@heroicons/react/24/outline";
+'use client';
+import React from 'react';
+import { EllipsisHorizontalIcon } from '@heroicons/react/24/outline';
 
 function ClientCardDropdown() {
 	return (

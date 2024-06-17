@@ -5,11 +5,11 @@ const ClientSchema = new Schema({
   user: { type: Schema.Types.ObjectId, ref: 'User' },
   businessName: {
     type: String,
-    required: [true, 'Business name is required!'],
+    required: [true, 'Business name is required!']
   },
   businessType: {
     type: String,
-    required: [true, 'Business type is required!'],
+    required: [true, 'Business type is required!']
   },
   address: {
     type: String,
@@ -22,7 +22,7 @@ const ClientSchema = new Schema({
   phone: {
     type: String,
     required: false
-  },
+  }
 })
 
 const Client = models.Client || model('Client', ClientSchema)

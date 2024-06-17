@@ -1,5 +1,5 @@
 const passport = require('passport')
-//const mockUser = require('../config/mockUser.json')
+// const mockUser = require('../config/mockUser.json')
 
 module.exports = {
   authDiscord: passport.authenticate('discord'),
@@ -13,8 +13,9 @@ module.exports = {
       if (process.env.NODE_ENV !== 'test') console.log(`${username} has logged out.`)
     })
     req.session.destroy(err => {
-      if (err && process.env.NODE_ENV !== 'test')
+      if (err && process.env.NODE_ENV !== 'test') {
         console.log(`Session could not be destroyed during logout for user: ${username}.`, next(err))
+      }
       req.user = null
       return res.json({ message: 'Logout successful.' })
     })

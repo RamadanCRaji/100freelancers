@@ -27,7 +27,7 @@ const useProvideAuth = () => {
 
   const logout = async () => {
     console.log('Logging out...')
-    const response = await fetch('/server/auth/logout', {
+    await fetch('/server/auth/logout', {
       method: 'POST',
       credentials: 'include'
     })
@@ -38,7 +38,7 @@ const useProvideAuth = () => {
     checkAuth,
     user,
     logout,
-    isAuthenticated,
+    isAuthenticated
   }
 }
 

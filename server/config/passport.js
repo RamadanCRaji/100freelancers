@@ -25,7 +25,7 @@ module.exports = function (passport) {
   })
 
   if (process.env.NODE_ENV === 'local') { require('./passportMockUser')() }
-  else
+  else {
     passport.use(
       new DiscordStrategy({
         clientID: process.env.DISCORD_CLIENT_ID,
@@ -45,7 +45,7 @@ module.exports = function (passport) {
                 email: profile.email,
                 username: profile.username,
                 avatar: profile.avatar,
-                is100devs: is100devs,
+                is100devs,
                 admin: false
               })
               return cb(null, user)
@@ -63,4 +63,5 @@ module.exports = function (passport) {
         }
       )
     )
+  }
 }

@@ -1,12 +1,11 @@
 'use client'
 
 import { useState, useEffect } from 'react'
-import { ThemeProvider } from 'next-themes'
-import { useTheme } from 'next-themes'
+import { ThemeProvider, useTheme } from 'next-themes'
 
 const ToggleThemeProvider = ({ children }) => {
     const [mounted, setMounted] = useState(false)
-    const { theme } = useTheme()
+    // const { theme } = useTheme()
 
     useEffect(() => {
         setMounted(true)

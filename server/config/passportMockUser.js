@@ -18,7 +18,7 @@ const RESPONSES = {
       {
         id: '735923219315425401',
         name: 'Learn w/ Leon and Friends'
-      },
+      }
     ]
   }
 }

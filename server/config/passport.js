@@ -33,7 +33,7 @@ module.exports = function (passport) {
         clientSecret: process.env.DISCORD_CLIENT_SECRET,
         callbackURL: `${process.env.FRONTEND_URL}/server/auth/discord/callback`,
         scope: ['identify', 'email', 'guilds'],
-        passReqToCallback: true,
+        passReqToCallback: true
       },
         async function (req, accessToken, refreshToken, profile, cb) {
           const is100devs = profile.guilds.some(server => server.id === '735923219315425401')

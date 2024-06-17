@@ -10,6 +10,7 @@ const MongoStore = require('connect-mongo')(session)
 const bodyParser = require('body-parser')
 const mockUser = require('./config/mockUser.json')
 const User = require('./models/User')
+const path = require('path');
 require('dotenv').config({ path: './config/.env' })
 const PORT = 4000
 
@@ -54,7 +55,7 @@ if (process.env.NODE_ENV === 'local') {
         secure: true, // Set to true if you're using HTTPS
         httpOnly: true,
         maxAge: 1000 * 60 * 60 * 24, // 1 day
-        sameSite: 'none',
+        sameSite: 'none'
       }
     })
   )

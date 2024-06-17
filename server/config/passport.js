@@ -24,8 +24,9 @@ module.exports = function (passport) {
     }
   })
 
-  if (process.env.NODE_ENV === 'local') { require('./passportMockUser')() }
-  else {
+  if (process.env.NODE_ENV === 'local') {
+    require('./passportMockUser')()
+  } else {
     passport.use(
       new DiscordStrategy({
         clientID: process.env.DISCORD_CLIENT_ID,

@@ -12,7 +12,7 @@ module.exports = {
       const user = process.env.MOCK_USER === 'true' ? mockUser._id : req.user.id
       const { businessName, businessType, address, email, phone } = req.body
       const client = await Client.create({
-        user: user,
+        user,
         businessName,
         businessType: businessType.toLowerCase(),
         address,

@@ -7,7 +7,7 @@ const UserSchema = new Schema({
   username: String,
   avatar: String,
   is100devs: Boolean,
-  admin: Boolean,
+  admin: Boolean
 })
 
 const User = models.User || model('User', UserSchema)

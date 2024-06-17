@@ -13,21 +13,21 @@ const User = require('./models/User')
 require('dotenv').config({ path: './config/.env' })
 const PORT = 4000
 
-// ***************************** 
+// *****************************
 // Middleware
 
 app.use(express.json())
-app.use('/public', express.static(__dirname + '/public'))
+app.use('/public', express.static(path.join(__dirname, '/public')))
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: true }))
 app.use(
   cors({
     origin: process.env.FRONTEND_URL,
-    credentials: true,
+    credentials: true
   })
 )
 
-// ***************************** 
+// *****************************
 // Sessions (MongoDB)
 
 app.use(cookieParser())
@@ -54,7 +54,7 @@ if (process.env.NODE_ENV === 'local') {
         secure: true, // Set to true if you're using HTTPS
         httpOnly: true,
         maxAge: 1000 * 60 * 60 * 24, // 1 day
-        sameSite: "none",
+        sameSite: 'none',
       }
     })
   )
@@ -78,7 +78,7 @@ if (process.env.NODE_ENV === 'local') {
   })
 }
 
-// ***************************** 
+// *****************************
 // Routers
 
 const homeRoutes = require('./routes/home')

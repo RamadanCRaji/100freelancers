@@ -13,8 +13,8 @@ module.exports = {
       const user = process.env.MOCK_USER === 'true' ? mockUser._id : req.user.id
       const { client, contactDetails, responseDetails, clientWork } = req.body
       const outreach = await Outreach.create({
-        user: user,
-        client: client,
+        user,
+        client,
         contactDetails,
         responseDetails,
         clientWork

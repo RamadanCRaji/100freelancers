@@ -26,7 +26,7 @@ module.exports = {
       }
     }
   },
-  plugins: [require("@tailwindcss/typography"), require("daisyui")],
+  plugins: [require('@tailwindcss/typography'), require('daisyui')],
   daisyui: {
     themes: [{
       light: {
@@ -47,5 +47,5 @@ module.exports = {
         'base-100': '#142833'
       }
     }]
-  },
+  }
 }

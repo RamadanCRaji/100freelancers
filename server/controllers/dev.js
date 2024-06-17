@@ -7,8 +7,8 @@ module.exports = {
     if (process.env.NODE_ENV === 'local') {
       try {
         const user = process.env.MOCK_USER === 'true' ? mockUser._id : req.user.id
-        let mockClientsWithUser = mockClients
-        for (let client of mockClientsWithUser) {
+        const mockClientsWithUser = mockClients
+        for (const client of mockClientsWithUser) {
           client.user = user
         }
         await Client.insertMany(mockClients)

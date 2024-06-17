@@ -7,19 +7,19 @@ const RESPONSES = {
       token_type: 'Bearer',
       expires_in: 604800,
       refresh_token: '100_DEVER',
-      scope: 'identify',
+      scope: 'identify'
     },
     '/users/@me': {
       id: '1',
       username: '100Dever',
-      discriminator: '0001',
+      discriminator: '0001'
     },
     '/users/@me/guilds': [
       {
         id: '735923219315425401',
-        name: 'Learn w/ Leon and Friends',
+        name: 'Learn w/ Leon and Friends'
       },
-    ],
+    ]
   }
 }
 
@@ -31,7 +31,7 @@ module.exports = function mockDiscordResponses() {
       return (
         RESPONSES[code]?.['/oauth2/token'] || {
           message: 'OAuth Failed',
-          code: 0,
+          code: 0
         }
       )
     })
@@ -41,7 +41,7 @@ module.exports = function mockDiscordResponses() {
       return (
         RESPONSES[token]?.['/users/@me'] || {
           message: '401: Unauthorized',
-          code: 0,
+          code: 0
         }
       )
     })
@@ -51,7 +51,7 @@ module.exports = function mockDiscordResponses() {
       return (
         RESPONSES[token]?.['/users/@me/guilds'] || {
           message: '401: Unauthorized',
-          code: 0,
+          code: 0
         }
       )
     })

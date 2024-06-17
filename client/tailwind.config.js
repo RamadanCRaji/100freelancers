@@ -8,14 +8,14 @@ module.exports = {
   ],
   theme: {
     screens: {
-      'sm': '640px',
-      'md': '768px',
-      'lg': '1024px',
-      'xl': '1280px',
+      sm: '640px',
+      md: '768px',
+      lg: '1024px',
+      xl: '1280px',
       '2xl': '1536px',
       '3xl': '1800px',
       '4xl': '2300px',
-      'xs': '400px',
+      xs: '400px',
       '2xs': '300px'
     },
     extend: {
@@ -31,20 +31,20 @@ module.exports = {
     themes: [{
       light: {
         // ...require("daisyui/src/theming/themes")["[data-theme=emerald]"],
-        "primary": "#F1F6F9",
-        "secondary": "#142833",
-        "accent": "#0089B6",
-        "neutral": "#fff",
-        "base-100": "#D7E4EB"
+        primary: '#F1F6F9',
+        secondary: '#142833',
+        accent: '#0089B6',
+        neutral: '#fff',
+        'base-100': '#D7E4EB'
       }
     }, {
       dark: {
         // ...require("daisyui/src/theming/themes")["[data-theme=dark]"],
-        "primary": "#355565",
-        "secondary": "#D7E4EB",
-        "accent": "#0089B6",
-        "neutral": "#fff",
-        "base-100": "#142833"
+        primary: '#355565',
+        secondary: '#D7E4EB',
+        accent: '#0089B6',
+        neutral: '#fff',
+        'base-100': '#142833'
       }
     }]
   },

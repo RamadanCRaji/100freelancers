@@ -30,4 +30,5 @@ jobs:
         env:
           # To report GitHub Actions status checks
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          CSS_FILE_NAME: ./config/.stylelintrs.json
+          LINTER_RULES_PATH: .github/linters
+          CSS_FILE_NAME: .stylelintrs.json

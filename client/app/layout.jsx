@@ -10,27 +10,27 @@ import Favicon from '@/public/favicon.ico'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata = {
-    title: '100 Freelancers',
-    description: 'Organize and keep track of client outreach',
-    icons: [{ rel: 'icon', url: Favicon.src }],
+  title: '100 Freelancers',
+  description: 'Organize and keep track of client outreach',
+  icons: [{ rel: 'icon', url: Favicon.src }],
 }
 
 const RootLayout = ({ children }) => {
-    return (
-        <html lang="en">
-            <body className={inter.className}>
-                <ToggleThemeProvider>
-                    <AuthProvider>
-                        <Header ThemeToggle={ThemeToggle} />
-                        <main className="content">
-                            {children}
-                        </main>
-                    </AuthProvider>
-                    <Footer />
-                </ToggleThemeProvider>
-            </body>
-        </html >
-    )
+  return (
+    <html lang="en">
+      <body className={inter.className}>
+        <ToggleThemeProvider>
+          <AuthProvider>
+            <Header ThemeToggle={ThemeToggle} />
+            <main className="content">
+              {children}
+            </main>
+          </AuthProvider>
+          <Footer />
+        </ToggleThemeProvider>
+      </body>
+    </html >
+  )
 }
 
 export default RootLayout

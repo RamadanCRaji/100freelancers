@@ -1,6 +1,6 @@
-import React from "react";
-import { useEffect, useState } from "react";
-import CountUp from "react-countup";
+import React from 'react';
+import { useEffect, useState } from 'react';
+import CountUp from 'react-countup';
 
 function ProposalVsContract({ stats, showPercentage }) {
   const [numberData, setNumberData] = useState({
@@ -9,8 +9,8 @@ function ProposalVsContract({ stats, showPercentage }) {
   });
   useEffect(() => {
     setNumberData((prevData) => ({
-      proposalSent: stats.profileStats["proposalsSent"],
-      contractsSent: stats.profileStats["contractsSent"],
+      proposalSent: stats.profileStats['proposalsSent'],
+      contractsSent: stats.profileStats['contractsSent'],
     }));
   }, [stats]);
 
@@ -24,7 +24,7 @@ function ProposalVsContract({ stats, showPercentage }) {
     : 0;
   return (
     <>
-      <div className=" stats stats-vertical w-full bg-primary text-primary-content shadow 2xs:stats-horizontal xs:stats-horizontal  sm:stats-horizontal md:stats-horizontal lg:stats-horizontal ">
+      <div className="stats stats-vertical w-full bg-primary text-primary-content shadow 2xs:stats-horizontal xs:stats-horizontal  sm:stats-horizontal md:stats-horizontal lg:stats-horizontal ">
         <div className="stat p-1">
           <div className="sm:text-md stat-title p-0 text-secondary 2xs:text-[15px] xs:text-base sm:flex sm:items-center sm:justify-center xl:text-lg">
             Proposals Sent
@@ -39,7 +39,7 @@ function ProposalVsContract({ stats, showPercentage }) {
         </div>
         <div className="stat p-1">
           <div className="sm:text-md stat-title p-0 text-secondary 2xs:text-sm xs:text-[15px] sm:flex sm:items-center sm:justify-center xl:text-lg">
-             Contracts Sent
+            Contracts Sent
           </div>
           <div className="stat-value 2xs:text-base xs:text-base sm:text-lg lg:text-2xl xl:text-2xl">
             {showPercentage ? (

@@ -1,6 +1,6 @@
-import React from "react";
-import { useEffect, useState } from "react";
-import CountUp from "react-countup";
+import React from 'react';
+import { useEffect, useState } from 'react';
+import CountUp from 'react-countup';
 
 function OutreachSuccesseRate({ stats, showPercentage }) {
   const [responseCounts, setResponseCounts] = useState({
@@ -9,8 +9,8 @@ function OutreachSuccesseRate({ stats, showPercentage }) {
   });
   useEffect(() => {
     setResponseCounts((prevData) => ({
-      respondedCount: stats.profileStats["answeredOutreach"],
-      notRespondedCount: stats.profileStats["unansweredOutreach"],
+      respondedCount: stats.profileStats['answeredOutreach'],
+      notRespondedCount: stats.profileStats['unansweredOutreach'],
     }));
   }, [stats]);
 
@@ -22,7 +22,7 @@ function OutreachSuccesseRate({ stats, showPercentage }) {
     : 0;
   return (
     <>
-      <div className=" xs:stat-horizontal stats stats-vertical w-full bg-primary text-primary-content shadow md:stats-horizontal lg:stats-horizontal ">
+      <div className="xs:stat-horizontal stats stats-vertical w-full bg-primary text-primary-content shadow md:stats-horizontal lg:stats-horizontal ">
         <div className="stat p-1">
           <div className="sm:text-md stat-title text-secondary 2xs:text-base xs:text-base sm:flex sm:items-center sm:justify-center xl:text-lg">
             Success

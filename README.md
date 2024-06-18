@@ -1,9 +1,7 @@
-<h3 align="center">100freelancers</h3>
+# 100freelancers
 
   <p align="center">
     100freelancers is a tool to keep track of potential web development freelance clients.
-<!--     <br />
-    <a href="https://github.com/devlarabar/100freelancers"><strong>Explore the docs »</strong></a> -->
     <br />
     <br />
     <a href="https://100freelancers.vercel.app/">View Demo</a>
@@ -40,45 +38,43 @@ The wireframe below outlines the project's models and general layout. Authentica
 
 Currently, the project has functional authentication and session storage through Passport, as well as functional adding of clients and outreach. There is also support for light/dark mode using DaisyUI. See below for screenshots!
 
-<img src="https://github.com/devlarabar/100freelancers/assets/122644200/1698dd2e-8057-44f3-9f1a-bcbe81fedd51" width="48%">
-<img src="https://github.com/devlarabar/100freelancers/assets/122644200/d1f9c8a9-5adf-4b91-99c0-8aacef2a3cf0" width="48%">
+<img src="https://github.com/devlarabar/100freelancers/assets/122644200/1698dd2e-8057-44f3-9f1a-bcbe81fedd51" width="48%" alt="Screenshot of 100freelancers">
+<img src="https://github.com/devlarabar/100freelancers/assets/122644200/d1f9c8a9-5adf-4b91-99c0-8aacef2a3cf0" width="48%" alt="Screenshot of 100freelancers">
 
 ## :memo: Installation
 
 This app uses [NPM](https://www.npmjs.com/) to manage its dependences and packages.
 
-1. Fork and clone the repo
+1. Fork and clone the repository
 
-    ```
+    ```bash
     git clone https://github.com/devlarabar/100freelancers.git
     ```
 
 2. Run the following in both the `client` and `server` directories:
 
-    ```
+    ```bash
     npm install
     ```
 
 3. Create an `.env` file in `server/config/` _and_ in `client/`. Copy everything from the respective `.env.example` files in both directories into these new files. **Do not delete the example!**  
-   For example, run:
+  For example, run:
 
-    ```
-    cp .env.example .env
-    ```
+  ```bash
+  cp .env.example .env
+  ```
 
-    to copy the contents of `.env.example` into a new file named `.env`
+  to copy the contents of `.env.example` into a new file named `.env`
 
 4. We have a local MongoDB instance set up through Docker.
-   [Docker Desktop](https://www.docker.com/products/docker-desktop/) will need to be installed to run the database.
-   You can manage it using the following commands:
+   [Docker Desktop](https://www.docker.com/products/docker-desktop/) will need to be installed to run the database. You can manage it using the following commands:
 
-    ```
     To start the local MongoDB instance, run:
-
+    ```bash
     npm run db:up
-
+    ```
     To stop the local MongoDB instance, run:
-
+    ```bash
     npm run db:stop
     ```
 
@@ -93,13 +89,13 @@ This app uses [NPM](https://www.npmjs.com/) to manage its dependences and packag
 
 5. To run the app locally, navigate to the `client` directory and run:
 
-    ```
+    ```bash
     npm run dev
     ```
 
     Then navigate to the `server` directory and run:
 
-    ```
+    ```bash
     npm run db:up
     npm run serve
     ```

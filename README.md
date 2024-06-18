@@ -1,9 +1,7 @@
-<h3 align="center">100freelancers</h3>
+# 100freelancers
 
   <p align="center">
     100freelancers is a tool to keep track of potential web development freelance clients.
-<!--     <br />
-    <a href="https://github.com/devlarabar/100freelancers"><strong>Explore the docs »</strong></a> -->
     <br />
     <br />
     <a href="https://100freelancers.vercel.app/">View Demo</a>
@@ -47,7 +45,7 @@ Currently, the project has functional authentication and session storage through
 
 This app uses [NPM](https://www.npmjs.com/) to manage its dependences and packages.
 
-1. Fork and clone the repo
+1. Fork and clone the repository
 
     ```
     git clone https://github.com/devlarabar/100freelancers.git

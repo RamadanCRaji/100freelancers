@@ -68,15 +68,12 @@ This app uses [NPM](https://www.npmjs.com/) to manage its dependences and packag
 
 4. We have a local MongoDB instance set up through Docker.
    [Docker Desktop](https://www.docker.com/products/docker-desktop/) will need to be installed to run the database. You can manage it using the following commands:
-    
-    To start the local MongoDB instance, run:
 
+    To start the local MongoDB instance, run:
     ```bash
     npm run db:up
     ```
-
     To stop the local MongoDB instance, run:
-
     ```bash
     npm run db:stop
     ```

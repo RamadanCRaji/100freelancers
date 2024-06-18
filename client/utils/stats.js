@@ -1,4 +1,4 @@
-export async function fetchStats() {
+export async function fetchStats () {
   const profileStats = await fetch('/server/profile/stats/getstats', {
     method: 'GET',
     credentials: 'include'

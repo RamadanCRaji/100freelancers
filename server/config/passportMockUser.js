@@ -23,7 +23,7 @@ const RESPONSES = {
   }
 }
 
-module.exports = function mockDiscordResponses() {
+module.exports = function mockDiscordResponses () {
   return nock('https://discord.com/api')
     .post('/oauth2/token')
     .reply(200, (_, requestBody) => {

@@ -10,7 +10,7 @@ module.exports = {
       }
     ]
   },
-  async rewrites() {
+  async rewrites () {
     return [
       {
         source: '/server/:path*',

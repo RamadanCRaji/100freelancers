@@ -10,7 +10,7 @@ const MongoStore = require('connect-mongo')(session)
 const bodyParser = require('body-parser')
 const mockUser = require('./config/mockUser.json')
 const User = require('./models/User')
-const path = require('path');
+const path = require('path')
 require('dotenv').config({ path: './config/.env' })
 const PORT = 4000
 

@@ -34,34 +34,33 @@ module.exports = function (passport) {
         callbackURL: `${process.env.FRONTEND_URL}/server/auth/discord/callback`,
         scope: ['identify', 'email', 'guilds'],
         passReqToCallback: true
-      },
-        async function (req, accessToken, refreshToken, profile, cb) {
-          const is100devs = profile.guilds.some(server => server.id === '735923219315425401')
-          let user = await User.findOne({ discordId: profile.id }).exec()
-          try {
-            if (!user) {
-              console.log('Logging in...')
-              user = await User.create({
-                discordId: profile.id,
-                email: profile.email,
-                username: profile.username,
-                avatar: profile.avatar,
-                is100devs,
-                admin: false
-              })
-              return cb(null, user)
-            } else {
-              user.username = profile.username
-              user.avatar = profile.avatar
-              user.is100devs = is100devs
-              const updatedUser = await user.save()
-              return cb(null, updatedUser)
-            }
-          } catch (err) {
-            console.log(err)
-            return cb(err, false)
+      }, async function (req, accessToken, refreshToken, profile, cb) {
+        const is100devs = profile.guilds.some(server => server.id === '735923219315425401')
+        let user = await User.findOne({ discordId: profile.id }).exec()
+        try {
+          if (!user) {
+            console.log('Logging in...')
+            user = await User.create({
+              discordId: profile.id,
+              email: profile.email,
+              username: profile.username,
+              avatar: profile.avatar,
+              is100devs,
+              admin: false
+            })
+            return cb(null, user)
+          } else {
+            user.username = profile.username
+            user.avatar = profile.avatar
+            user.is100devs = is100devs
+            const updatedUser = await user.save()
+            return cb(null, updatedUser)
           }
+        } catch (err) {
+          console.log(err)
+          return cb(err, false)
         }
+      }
       )
     )
   }

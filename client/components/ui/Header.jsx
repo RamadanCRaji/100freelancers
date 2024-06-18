@@ -65,7 +65,7 @@ const Header = ({ ThemeToggle }) => {
             <form action={'/server/auth/discord'}>
               <button
                 type="submit"
-                className="btnCustom"
+                className="btn-custom"
               >
                 Sign In
               </button></form>

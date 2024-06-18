@@ -32,11 +32,8 @@ h2 {
 
 /* Client Card/List Container Views */
 
-.card-view{
-    @apply grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-x-[2%] gap-y-4 justify-center;
-}
-.list-view{
-    
+.card-view {
+	@apply grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-x-[2%] gap-y-4 justify-center;
 }
 
 .client-contact {
@@ -50,6 +47,7 @@ h2 {
 .contact-icon {
 	@apply min-w-min min-h-min w-5 h-5 xs:w-7 xs:h-7 text-accent stroke-2;
 }
+
 .contact-icon-list {
 	@apply w-4 h-4 text-accent stroke-2;
 }
@@ -113,13 +111,13 @@ input:not([type="checkbox"]) {
 /* Landing page */
 
 .floats h3 {
-	@apply text-center text-3xl lg:text-left sm:text-7xl text-accent ;
+	@apply text-center text-3xl lg:text-left sm:text-7xl text-accent;
 }
 
 .floats p {
-	@apply text-center text-lg lg:text-left sm:text-3xl lg:ml-10 font-bold pb-10  ;
+	@apply text-center text-lg lg:text-left sm:text-3xl lg:ml-10 font-bold pb-10;
 }
 
-.btnCustom {
-	@apply border-4 py-1 px-4 w-[7rem] rounded-lg border-accent text-accent text-sm sm:text-lg mt-2 font-semibold uppercase 
+.btn-custom {
+	@apply border-4 py-1 px-4 w-[7rem] rounded-lg border-accent text-accent text-sm sm:text-lg mt-2 font-semibold uppercase
 }
